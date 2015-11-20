@@ -1,0 +1,29 @@
+{
+	"version": 0,
+	"dependencies": [
+		{
+			"importpath": "github.com/codegangsta/inject",
+			"repository": "https://github.com/codegangsta/inject",
+			"revision": "33e0aa1cb7c019ccc3fbe049a8262a6403d30504",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/go-martini/martini",
+			"repository": "https://github.com/go-martini/martini",
+			"revision": "15a47622d6a9b3e6a1eaca2681e4850f612471ea",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/martini-contrib/gzip",
+			"repository": "https://github.com/martini-contrib/gzip",
+			"revision": "01cd70f560c841c6e52b9ba8f09748e18e35e2c4",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/martini-contrib/staticbin",
+			"repository": "https://github.com/martini-contrib/staticbin",
+			"revision": "b9631fb8c188bec7aefed202f05fb3b76abadced",
+			"branch": "master"
+		}
+	]
+}
