@@ -9,6 +9,6 @@ shown in the view. No data is persisted anywhere.
 $ obd2-data-viewer -port 9300
 ```
 
-Set Android application to log to http://<your-server-ip>:9300/data
+Set Android application to log to http://your-server-ip:9300/data
 
-View data at http://<your-server-ip>:9300/
+View data at http://your-server-ip:9300/
