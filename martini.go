@@ -105,6 +105,16 @@ func main() {
 		fmt.Println(rec)
 
 		carmutex.Lock()
+		// Get latest time clear all trip data if the time we are
+		// receiving is over an hour after the last time received.
+		if len(cardata) > 0 {
+			recentTime := cardata[len(cardata)-1].DateTime
+			if rec.DateTime.Sub(recentTime) > time.Hour {
+				cardata = []Record{}
+			}
+		}
+
+		// Append received record to trip.
 		cardata = append(cardata, rec)
 		carmutex.Unlock()
 	}
@@ -140,7 +150,7 @@ func main() {
 			chartData.DataSets[0].Values[rIdx] = rec.Speed
 			chartData.DataSets[1].Values[rIdx] = rec.ThrottlePos
 			rpm, _ := strconv.ParseInt(rec.EngineRPM, 10, 64)
-			chartData.DataSets[2].Values[rIdx] = fmt.Sprint(rpm/100)
+			chartData.DataSets[2].Values[rIdx] = fmt.Sprint(rpm / 100)
 		}
 		carmutex.RUnlock()
 
